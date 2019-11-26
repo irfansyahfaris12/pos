@@ -1,0 +1,12 @@
+.col-md-2{
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width:700px) {
+  .col-md-10{
+  }
+  .dashboard {
+    margin-top: 50px;
+  }
+}
