@@ -10,8 +10,9 @@ export default class Pagetransaksi extends Component {
         kode_produk: '',
         produk: '',
         harga: '',
-        jumlah: 1,
-        total: ''
+        jumlah: "",
+        total: '',
+        stateidamar: ""
     }
     componentDidMount() {
         Axios.get('https://laravel-pos-1999.herokuapp.com/api/product')
@@ -33,16 +34,27 @@ export default class Pagetransaksi extends Component {
         }
 
         console.log("cart", dataCart['dataTransaksi'])
-        Axios.post('https://laravel-pos-1999.herokuapp.com/api/transaksi',dataCart)
+         dataCart['dataTransaksi'].map((res, id) => {
+            console.log("amar id" , id)
+            Axios
+            .post('https://laravel-pos-1999.herokuapp.com/api/transaksi',dataCart['dataTransaksi'][`${id}`])
             .then(ress => {
                 console.log(ress)
             })
+
+            // Axios.put("https://laravel-pos-1999.herokuapp.com/api/product",)
+        })
+        // Axios.post('https://laravel-pos-1999.herokuapp.com/api/transaksi',dataCart['dataTransaksi'])
+        //     .then(ress => {
+        //         console.log(ress)
+        //     })
     }
 
     handleChange = (e) => {
         this.setState({
             [e.target.name]: e.target.value,
         })
+        console.log(e.target.value)
     }
 
     handleCart = (stok) => {
