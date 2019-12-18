@@ -6,7 +6,7 @@ import Logo from "../asset/logo/logo.png"
 const Sidebar = (props) => {
     return (
         <div className="col-md-2">
-            <div id={props.sidebar ? 'sidebar-show' : 'sidebar'} className="sidebar text-center">
+            <div id={props.sidebar ? 'sidebar-show' : 'sidebar'} className="card sidebar text-center">
                 <div className="title-sidebar">
                     <h3>Delta</h3>
                     <h4>Poin Of Sale</h4>
@@ -20,7 +20,7 @@ const Sidebar = (props) => {
                     <Link to="/dashboard/harian">
                         <i className="fas fa-layer-group    "> Dashboard</i>
                     </Link>
-                    <Link>
+                    <Link to="/data">
                         <i className="fas fa-database    "> Data</i>
                     </Link>
                     <Link to="/transaksi">
@@ -28,7 +28,7 @@ const Sidebar = (props) => {
                     </Link>
                 </div>
                 <div className="footer-sidebar text-left    ">
-                    <Link>
+                    <Link to="/setting">
                         <i className="fa fa-cog" aria-hidden="true"> Setting</i>
                     </Link>
                 </div>

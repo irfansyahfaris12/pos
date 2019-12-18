@@ -1,11 +1,14 @@
+$fontColor: gray;
+$bgColor: #FAACA8;
+
 .navbar {
     // width: 414px;
     // width: 57vh;
     // left: 0;
     display: none;
     position: fixed;
-    background-color: #FAACA8;
-    background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
+    background-color: $bgColor;
+    background-image: linear-gradient(19deg, $bgColor 0%, #DDD6F3 100%);
   
     img {
     //   margin-right: 10px;
@@ -15,7 +18,7 @@
     }
     i{
         margin-top: 10px;
-        color: gray;
+        color: $fontColor
     }
   }
   

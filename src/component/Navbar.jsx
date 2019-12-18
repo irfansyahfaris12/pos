@@ -8,7 +8,7 @@ export default class Navbar extends Component {
         return (
             <nav className="navbar fixed-top">
                 <img src={Logo} alt="logo" />
-                <i class="fa fa-list" onClick={this.props.side}></i>
+                <i className="fa fa-list" onClick={this.props.side}></i>
             </nav>
         )
     }
